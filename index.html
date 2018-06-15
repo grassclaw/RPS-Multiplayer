@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <!-- For media queries in Bootstrap. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <!-- Bootswatch CDN link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/Icon.png">
+    <!-- Firebase script -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <!-- App script -->
+    <script type="text/javascript" src="assets/logic.js"></script>
+</head>
+
+<body class="center-block">
+<header class="center-block">
+    <h1 class="text-center">Rock ~ Paper ~ Scissors</h1>
+    <h2 class="alert alert-danger">Error: Two players are already playing. Please come back later.</h2>
+</header>
+<section class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <form class="user-form">
+            <div class="input-group">
+                <label for="username" class="sr-only">Your name</label>
+                <input id="username" placeholder="Name" class="form-control" type="text">
+            </div>
+            <span class="input-group-btn"><button class="btn btn-success" type="submit" id="submit-name">Start</button></span>
+        </form>
+        <p class="hello"></p>
+    </div>
+</section>
+<main>
+    <div class="row game-row">
+        <div class="col-xs-12 col-sm-4 box box-1">
+            <p class="name name-1"></p>
+            <div class="dynamic-box">
+                <p class="waiting waiting-1">Waiting for Player 1</p>
+                <div class="moves moves-1">
+                    <p class="move" data-choice="r" data-text="rock" role="button">rock</p>
+                    <p class="move" data-choice="p" data-text="paper" role="button">paper</p>
+                    <p class="move" data-choice="s" data-text="scissors" role="button">scissors</p>
+                </div>
+                <p class="choice choice-1"></p>
+            </div>
+            <p class="win-loss win-loss-1"></p>
+        </div>
+        <div class="col-xs-12 col-sm-4 box dynamic-box box-result">
+            <p class="turn"></p>
+            <p class="winner"></p>
+        </div>
+        <div class="col-xs-12 col-sm-4 box box-2">
+            <p class="name name-2"></p>
+            <div class="dynamic-box">
+                <p class="waiting waiting-2">Waiting for Player 2</p>
+                <div class="moves moves-2">
+                    <p class="move" data-choice="r" data-text="rock" role="button">rock</p>
+                    <p class="move" data-choice="p" data-text="paper" role="button">paper</p>
+                    <p class="move" data-choice="s" data-text="scissors" role="button">scissors</p>
+                </div>
+                <p class="choice choice-2"></p>
+            </div>
+            <p class="win-loss win-loss-2"></p>
+        </div>
+    </div>
+    <div class="row chat-row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+            <div class="box box-chat">
+                <div class="messages"></div>
+            </div>
+            <form class="chat-form">
+                <div class="input-group">
+                    <label for="message" class="sr-only">Message:</label>
+                    <input id="message" placeholder="Type a message..." class="form-control" type="text">
+                </div>
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="submit" id="submit-chat">Send</button>
+                </span>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>
