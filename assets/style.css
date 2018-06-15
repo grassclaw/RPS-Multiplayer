@@ -1,141 +1,183 @@
-/*Overall layout*/
 
-body {
-    font-family: 'Lato', Verdana, Arial, sans-serif;
-    max-width: 94vw;
-    min-height: 96vh;
-    padding: 2vh 2vw;
-}
-
-p {
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-section {
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Items initially hidden */
-.hello,
-.moves,
-.choice,
-.turn,
-.alert,
-.chat-row {
-    display: none;
-    text-align: center;
-}
-
-/*Form styling*/
-
-form {
-    display: block;
-    width: 100%;
-}
-
-.input-group {
-    display: block;
-    width: 85%;
-}
-
-.input-group .form-control:last-child {
-    border-radius: 4px 0 0 4px;
-}
-
-.input-group-btn {
-    display: block;
-    padding: 0;
-    width: 20%;
-}
-
-/*Game layout*/
-.game-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    height: 280px;
-}
-
-.box {
-    background: deepskyblue;
-    border: 0 solid transparent;
-    border-radius: 5px;
-    height: 260px;
-    margin: 10px;
-    text-align: center;
-    width: 98%;
-}
-
-.dynamic-box {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    height: 70%;
-    width: 100%;
-}
-
-.box-result {
-    height: 260px;
-}
-
-.moves {
-    flex-direction: column;
-    justify-content: center;
-}
-
-.name,
-.win-loss {
-    height: 15%;
-}
-
-.choice {
-    font-size: 75px;
-}
-
-/*Chat-related*/
-.chat-row {
-    height: 280px;
-}
-
-.box-chat {
-    width: 100%;
-    margin-left: 0;
-}
-
-.messages {
-    text-align: left;
-    overflow-y: auto;
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-}
-
-.message {
-    font-size: 20px;
-}
-
-.sender {
-    font-weight: bold;
-}
-
-/*Media queries*/
-
-@media only screen and (max-width: 840px) {
-    .win-loss {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-width: 640px) {
-    .game-row {
-        display: block;
-    }
-}
+         body {
+            background-color: royalblue; /* pink */
+            font-family: 'Anton', sans-serif; /* titles */
+            font-size: 2em;
+        }
+        span {
+            font-size: 2em;
+        }
+        .bkg {
+            /* background-image: url('/'); */
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            min-height: 100vh;
+            height: auto;
+            overflow: hidden;
+        }
+        .container-head {
+            background-color: rgba(132, 11, 42, 1); /* egglant */
+            padding: 1.5em;
+            position: relative;
+            top: 2em;
+        }
+        .row-head {
+        }
+        .col-title-pic {
+            width: auto;
+            padding-right: 2em;
+        }
+        .title-pic {
+            width: 150px;
+            height: auto;
+        }
+        .col-title {
+            color: rgba(252, 176, 64, 1);  /* yellow */
+            padding: calc((150px - 4em)/2) 0 0 0;
+            margin: 0;
+            width: calc(100% - 150px - 4em);
+        }
+        .col-title h1 {
+            font-size: 4em;
+            padding: 0;
+            margin: 0;
+            font-family: 'Anton', sans-serif; /* titles */
+            line-height: 1;
+            letter-spacing: 0.1em;
+        }
+        @media screen and (max-width: 1088px) and (min-width: 830px) {
+            .col-title {
+                padding: calc((150px - 2.75em)/2) 0 0 0;
+            }
+            .col-title h1 {
+                font-size: 2.75em;
+            }
+        }
+        @media screen and (max-width: 829px) and (min-width: 570px) {
+            .col-title {
+                padding: calc((150px - 5.5em)/2) 0 0 0;
+            }
+            .col-title h1 {
+                font-size: 2.75em;
+            }
+        }
+        @media screen and (max-width: 569px) and (min-width: 513px) {
+            .col-title {
+                padding: calc((150px - 4.5em)/2) 0 0 0;
+            }
+            .col-title h1 {
+                font-size: 2.25em;
+            }
+        }
+        @media screen and (max-width: 512px) {
+            .col-title {
+                padding: calc((150px - 6.75em)/2) 0 0 0;
+            }
+            .col-title h1 {
+                font-size: 2.25em;
+            }
+            .col-title-pic {
+                margin: 0;
+                padding: 0 .75em 0 .25em;
+            }
+        }
+        
+        
+        #name-submit, #name-input {
+            padding: 0.25em;
+            border: none;
+            border-radius: 5px;
+        }
+        #name-input {
+            margin-bottom: 1em;
+        }
+        #name-submit {
+            background-color: rgba(252, 176, 64, 1);  /* yellow */
+        }
+        .col-start {
+            padding-top: 3em;
+            text-align: center;
+        }
+        .col-start span {
+            font-family: 'Anton', sans-serif; /* titles */
+            color: rgba(252, 176, 64, 1);  /* yellow */
+        }
+        .row-message {
+            display: none;
+            margin-top: 2em;
+        }
+        .col-message span {
+            font-family: 'Anton', sans-serif; /* titles */
+            color: rgba(252, 176, 64, 1);  /* yellow */
+        }
+        
+        .container-play {
+            padding-top: 3em;
+        }
+        .row-play-choice {
+            display: none;
+        }
+        .col-play-pic {
+            text-align: center;
+        }
+        .row-play-choice span {
+            color: rgba(252, 176, 64, 1);  /* yellow */
+            font-family: 'Anton', sans-serif; /* titles */
+        }
+        @media screen and (max-width: 699px) {
+            .col-play-pic {
+                width: calc(33%);
+            }
+            .col-play-pic img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media screen and (max-width: 665px) {
+            .row-play-choice span {
+                font-size: 1.25em;
+            }
+        }
+        .row-play-battle {
+            width: 100%;
+            margin: 0;
+        }
+        .col-my-play, .col-opponent-play {
+            text-align: center;
+        
+        }
+        .battle-img {
+            height: auto;
+            width: 100%;
+            max-width: 400px;
+        }
+        .winning-pic .battle-img {
+            width: 50%;
+            height: auto;
+            max-width: 400px;
+            margin-top: .75em;
+        }
+        
+        .pic-my-play, .pic-opponent-play, .winning-pic {
+            text-align: center;
+        }
+        .my-move-caption, .opponent-move-caption, .outcome-message, .col-reckoning {
+            text-align: center;
+        }
+        .my-move-caption span, .opponent-move-caption span, .outcome-message span {
+            color: rgba(252, 176, 64, 1);  /* yellow */
+            font-family: 'Anton', sans-serif; /* titles */
+        }
+        .row-score {
+            padding: 1em 0;
+        }
+        .col-score {
+            text-align: center;
+        }
+        .col-score span {
+            color: rgba(252, 176, 64, 1);  /* yellow */
+            font-size: 1em;
+            font-family: 'Anton', sans-serif; /* titles */
+            text-align: center;
+        }

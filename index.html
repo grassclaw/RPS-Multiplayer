@@ -16,79 +16,102 @@
     <link rel="stylesheet" href="assets/style.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/images/Icon.png">
-    <!-- Firebase script -->
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <!-- App script -->
-    <script type="text/javascript" src="assets/logic.js"></script>
-</head>
+ </head>
 
 <body class="center-block">
-<header class="center-block">
-    <h1 class="text-center">Rock ~ Paper ~ Scissors</h1>
-    <h2 class="alert alert-danger">Error: Two players are already playing. Please come back later.</h2>
-</header>
-<section class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-        <form class="user-form">
-            <div class="input-group">
-                <label for="username" class="sr-only">Your name</label>
-                <input id="username" placeholder="Name" class="form-control" type="text">
-            </div>
-            <span class="input-group-btn"><button class="btn btn-success" type="submit" id="submit-name">Start</button></span>
-        </form>
-        <p class="hello"></p>
-    </div>
-</section>
-<main>
-    <div class="row game-row">
-        <div class="col-xs-12 col-sm-4 box box-1">
-            <p class="name name-1"></p>
-            <div class="dynamic-box">
-                <p class="waiting waiting-1">Waiting for Player 1</p>
-                <div class="moves moves-1">
-                    <p class="move" data-choice="r" data-text="rock" role="button">rock</p>
-                    <p class="move" data-choice="p" data-text="paper" role="button">paper</p>
-                    <p class="move" data-choice="s" data-text="scissors" role="button">scissors</p>
-                </div>
-                <p class="choice choice-1"></p>
-            </div>
-            <p class="win-loss win-loss-1"></p>
-        </div>
-        <div class="col-xs-12 col-sm-4 box dynamic-box box-result">
-            <p class="turn"></p>
-            <p class="winner"></p>
-        </div>
-        <div class="col-xs-12 col-sm-4 box box-2">
-            <p class="name name-2"></p>
-            <div class="dynamic-box">
-                <p class="waiting waiting-2">Waiting for Player 2</p>
-                <div class="moves moves-2">
-                    <p class="move" data-choice="r" data-text="rock" role="button">rock</p>
-                    <p class="move" data-choice="p" data-text="paper" role="button">paper</p>
-                    <p class="move" data-choice="s" data-text="scissors" role="button">scissors</p>
-                </div>
-                <p class="choice choice-2"></p>
-            </div>
-            <p class="win-loss win-loss-2"></p>
-        </div>
-    </div>
-    <div class="row chat-row">
-        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-            <div class="box box-chat">
-                <div class="messages"></div>
-            </div>
-            <form class="chat-form">
-                <div class="input-group">
-                    <label for="message" class="sr-only">Message:</label>
-                    <input id="message" placeholder="Type a message..." class="form-control" type="text">
-                </div>
-                <span class="input-group-btn">
-                    <button class="btn btn-success" type="submit" id="submit-chat">Send</button>
-                </span>
-            </form>
-        </div>
-    </div>
-</main>
-</body>
+<div class="bkg">
 
-</html>
+        <div class="container-fluid container-head">
+            <div class="row row-head">
+                <div class="col col-xs-2 col-title-pic">
+                    <img class="title-pic" src="assets/images/Icon.png" />
+                </div><!-- / col-title-pic -->
+    
+                <div class="col col-xs-10 col-title">
+                    <h1>Rock Paper Scissors</h1>
+                </div><!-- / col-title -->
+    
+            </div><!-- /row-head -->
+        </div><!-- /div container-head -->
+    
+        <div class="container container-start">
+            <div class="row row-start">
+                <div class="col col-xs-12 col-start">
+                    <span>Play</span>
+                    <br />
+                        <input type="text" id="name-input" value="Name" />
+                        <input type="button" id="name-submit" value="Start" />
+                </div><!-- / col-start -->
+            </div><!-- / row-start -->
+            <div class="row row-message">
+                <div class="col col-xs-12 col-message">
+                </div><!-- / col-message -->
+            </div><!-- / row-message -->
+        </div><!-- / container-start -->
+    
+        <div class="container container-play">
+            <div class="row row-score">
+                <div class="col col-xs-4 col-score col-win">
+                    <span></span>
+                </div><!-- end col-score -->
+                <div class="col col-xs-4 col-score col-tie">
+                    <span></span>
+                </div><!-- end col-score -->
+                <div class="col col-xs-4 col-score col-lose">
+                    <span></span>
+                </div><!-- end col-score -->
+            </div><!-- end row-score -->
+            <div class="row row-play-choice">
+                <div class="col col-xs-4 col-play-rock col-play-pic">
+                    <img src="assets/images/Icon.png" data-move="rock" />
+                    <br />
+                    <span>Rock</span>
+                </div><!-- / col-play-rock -->
+    
+                <div class="col col-xs-4 col-play-paper col-play-pic">
+                    <img src="assets/images/Icon.png"  data-move="paper" />
+                    <br />
+                    <span>Paper</span>
+                </div><!-- / col-play-paper -->
+    
+                <div class="col col-xs-4 col-play-scissors col-play-pic">
+                    <img src="assets/images/Icon.png"  data-move="scissors" />
+                    <br />
+                    <span>Scissors</span>
+                </div><!-- / col-play-scissors -->
+            </div><!-- / row-play-choice -->
+    
+            <div class="row row-play-battle">
+                <div class="col col-xs-6 col-my-play">
+                    <div class="pic-my-play">
+                    </div><!-- /pic-opponent-play div -->
+                    <div class="my-move-caption">
+                    </div><!-- /opponent-move-caption div -->
+                </div><!-- / col-my-play -->
+    
+                <div class="col col-xs-6 col-opponent-play">
+                    <div class="pic-opponent-play">
+                    </div><!-- /pic-opponent-play div -->
+                    <div class="opponent-move-caption">
+                    </div><!-- /opponent-move-caption div -->
+                </div><!-- / col-opponent-play -->
+            </div><!-- / row-play-battle -->
+            <div class="row row-reckoning">
+                <div class="col col-xs-12 col-reckoning">
+                    <div class="outcome-message">
+                    </div><!-- / outcome-message -->
+                    <div class="winning-pic">
+                    </div><!-- / winning-img -->
+                </div><!-- / col-reckoning -->
+            </div><!-- / row-reckoning -->
+    
+        </div><!-- / container-play -->
+    
+    
+    
+    
+    </div><!-- / bkg div -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <!-- Firebase script -->
+   <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+   <script type="text/javascript" src="assets/logic.js"></script>
