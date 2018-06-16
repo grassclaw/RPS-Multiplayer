@@ -158,7 +158,9 @@
             max-width: 400px;
             margin-top: .75em;
         }
-        
+        img{
+            margin:2px;
+        }
         .pic-my-play, .pic-opponent-play, .winning-pic {
             text-align: center;
         }
