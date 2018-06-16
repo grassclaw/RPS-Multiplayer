@@ -1,11 +1,11 @@
 
          body {
-            background-color: royalblue; /* pink */
+            background-color: rgb(43, 54, 88);
             font-family: 'Anton', sans-serif; /* titles */
-            font-size: 2em;
+            font-size: 1.5em;
         }
         span {
-            font-size: 2em;
+            font-size: 1.5em;
         }
         .bkg {
             /* background-image: url('/'); */
@@ -17,7 +17,7 @@
             overflow: hidden;
         }
         .container-head {
-            background-color: rgba(132, 11, 42, 1); /* egglant */
+            background-color:rgb(19, 19, 112); /* egglant */
             padding: 1.5em;
             position: relative;
             top: 2em;
@@ -33,13 +33,13 @@
             height: auto;
         }
         .col-title {
-            color: rgba(252, 176, 64, 1);  /* yellow */
+            color: white;  /* yellow */
             padding: calc((150px - 4em)/2) 0 0 0;
             margin: 0;
             width: calc(100% - 150px - 4em);
         }
-        .col-title h1 {
-            font-size: 4em;
+        .col-title h2 {
+            font-size: 2em;
             padding: 0;
             margin: 0;
             font-family: 'Anton', sans-serif; /* titles */
@@ -50,32 +50,32 @@
             .col-title {
                 padding: calc((150px - 2.75em)/2) 0 0 0;
             }
-            .col-title h1 {
-                font-size: 2.75em;
+            .col-title h2 {
+                font-size: 1.5em;
             }
         }
         @media screen and (max-width: 829px) and (min-width: 570px) {
             .col-title {
                 padding: calc((150px - 5.5em)/2) 0 0 0;
             }
-            .col-title h1 {
-                font-size: 2.75em;
+            .col-title h2 {
+                font-size: 1.5em;
             }
         }
         @media screen and (max-width: 569px) and (min-width: 513px) {
             .col-title {
                 padding: calc((150px - 4.5em)/2) 0 0 0;
             }
-            .col-title h1 {
-                font-size: 2.25em;
+            .col-title h2 {
+                font-size: 1em;
             }
         }
         @media screen and (max-width: 512px) {
             .col-title {
                 padding: calc((150px - 6.75em)/2) 0 0 0;
             }
-            .col-title h1 {
-                font-size: 2.25em;
+            .col-title h2 {
+                font-size: 1em;
             }
             .col-title-pic {
                 margin: 0;
@@ -93,7 +93,7 @@
             margin-bottom: 1em;
         }
         #name-submit {
-            background-color: rgba(252, 176, 64, 1);  /* yellow */
+            background-color: white;  /* yellow */
         }
         .col-start {
             padding-top: 3em;
@@ -101,7 +101,7 @@
         }
         .col-start span {
             font-family: 'Anton', sans-serif; /* titles */
-            color: rgba(252, 176, 64, 1);  /* yellow */
+            color: white;  /* yellow */
         }
         .row-message {
             display: none;
@@ -109,7 +109,7 @@
         }
         .col-message span {
             font-family: 'Anton', sans-serif; /* titles */
-            color: rgba(252, 176, 64, 1);  /* yellow */
+            color: white;  /* yellow */
         }
         
         .container-play {
@@ -122,7 +122,7 @@
             text-align: center;
         }
         .row-play-choice span {
-            color: rgba(252, 176, 64, 1);  /* yellow */
+            color: white;  /* yellow */
             font-family: 'Anton', sans-serif; /* titles */
         }
         @media screen and (max-width: 699px) {
@@ -136,7 +136,7 @@
         }
         @media screen and (max-width: 665px) {
             .row-play-choice span {
-                font-size: 1.25em;
+                font-size: .75em;
             }
         }
         .row-play-battle {
@@ -166,7 +166,7 @@
             text-align: center;
         }
         .my-move-caption span, .opponent-move-caption span, .outcome-message span {
-            color: rgba(252, 176, 64, 1);  /* yellow */
+            color: white;  /* yellow */
             font-family: 'Anton', sans-serif; /* titles */
         }
         .row-score {
@@ -176,8 +176,8 @@
             text-align: center;
         }
         .col-score span {
-            color: rgba(252, 176, 64, 1);  /* yellow */
-            font-size: 1em;
+            color: white;  /* yellow */
+            font-size: .75em;
             font-family: 'Anton', sans-serif; /* titles */
             text-align: center;
         }
