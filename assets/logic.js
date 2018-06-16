@@ -163,7 +163,7 @@ function setLocalOpponent2Play() {
 	if (data.player1.play !== 1) {
 		playObj.player1.play = data.player1.play;
 		playObj.plays.twoPlay = playObj.player1.play;
-		$('.pic-opponent-play').html('<img class="battle-img" src="img/' + playObj.plays.twoPlay + '.png" alt="Your opponent played ' + playObj.plays.twoPlay + '" />');
+		$('.pic-opponent-play').html('<img class="battle-img" src="assets/images/' + playObj.plays.twoPlay + '.png" alt="Your opponent played ' + playObj.plays.twoPlay + '" />');
 		$('.opponent-move-caption').html('<span>' + playObj.plays.twoPlay + '</span>');
 		setTimeout(reckoning, 3000);
 	} else {
@@ -177,7 +177,7 @@ function reckoning() {
 	$('.row-play-battle').hide();
 	$('.row-reckoning').show();
 	if (playObj.plays.twoPlay === playObj.plays.onePlay) {
-		$('.winning-pic').html('<img class="battle-img" src="img/' + playObj.plays.onePlay + '.png" alt="You tie!" />');
+		$('.winning-pic').html('<img class="battle-img" src="assets/images/' + playObj.plays.onePlay + '.png" alt="You tie!" />');
 		$('.outcome-message').html('<span>you tie!</span>');
 		playObj.wins.ties++;
 		$('.col-win').find('span').text('wins: ' + playObj.wins.oneWins);
