@@ -34,7 +34,6 @@ var playObj = {
 	opponentName: null
 }
 
-
 function start() {
 	fire.ref().set({
 			player1: {
@@ -245,9 +244,6 @@ function setNext() {
 	$('.pic-opponent-play, .opponent-move-caption, .my-move-caption, .pic-my-play, .winning-pic, .outcome-message').empty();
 	$('.row-play-choice').show();
 }
-
-
-
 
 $(document).ready(function(){
 	fire.ref().on('value', function(snapshot) {
