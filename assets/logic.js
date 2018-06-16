@@ -126,7 +126,7 @@ function makeMove(event) {
 	console.log('onePlay is ' + playObj.plays.onePlay);
 	$('.row-play-choice').hide();
 	$('.row-play-battle').show();
-	$('.pic-my-play').html('<img class="battle-img" src="img/' + playObj.plays.onePlay + '.jpg" alt="You played ' + playObj.plays.onePlay + '" />');
+	$('.pic-my-play').html('<img class="battle-img" src="assets/images/' + playObj.plays.onePlay + '.png" alt="You played ' + playObj.plays.onePlay + '" />');
 	$('.my-move-caption').html('<span>' + playObj.plays.onePlay + '</span>');
 	if ((playObj.opponentName === data.player2.name) && (data.player1.play === 1)) {
 		playObj.player1.play = playObj.plays.onePlay;
@@ -152,7 +152,7 @@ function setLocalOpponent1Play() {
 	if (data.player2.play !== 1) {
 		playObj.player2.play = data.player2.play;
 		playObj.plays.twoPlay = playObj.player2.play;
-		$('.pic-opponent-play').html('<img class="battle-img" src="img/' + playObj.plays.twoPlay + '.jpg" alt="Your opponent played ' + playObj.plays.twoPlay + '" />');
+		$('.pic-opponent-play').html('<img class="battle-img" src="assets/images/' + playObj.plays.twoPlay + '.png" alt="Your opponent played ' + playObj.plays.twoPlay + '" />');
 		$('.opponent-move-caption').html('<span>' + playObj.plays.twoPlay + '</span>');
 		setTimeout(reckoning, 3000);
 	} else {
@@ -163,7 +163,7 @@ function setLocalOpponent2Play() {
 	if (data.player1.play !== 1) {
 		playObj.player1.play = data.player1.play;
 		playObj.plays.twoPlay = playObj.player1.play;
-		$('.pic-opponent-play').html('<img class="battle-img" src="img/' + playObj.plays.twoPlay + '.jpg" alt="Your opponent played ' + playObj.plays.twoPlay + '" />');
+		$('.pic-opponent-play').html('<img class="battle-img" src="img/' + playObj.plays.twoPlay + '.png" alt="Your opponent played ' + playObj.plays.twoPlay + '" />');
 		$('.opponent-move-caption').html('<span>' + playObj.plays.twoPlay + '</span>');
 		setTimeout(reckoning, 3000);
 	} else {
@@ -177,7 +177,7 @@ function reckoning() {
 	$('.row-play-battle').hide();
 	$('.row-reckoning').show();
 	if (playObj.plays.twoPlay === playObj.plays.onePlay) {
-		$('.winning-pic').html('<img class="battle-img" src="img/' + playObj.plays.onePlay + '.jpg" alt="You tie!" />');
+		$('.winning-pic').html('<img class="battle-img" src="img/' + playObj.plays.onePlay + '.png" alt="You tie!" />');
 		$('.outcome-message').html('<span>you tie!</span>');
 		playObj.wins.ties++;
 		$('.col-win').find('span').text('wins: ' + playObj.wins.oneWins);
@@ -185,7 +185,7 @@ function reckoning() {
 		$('.col-lose').find('span').text('losses: ' + playObj.wins.twoWins);
 		console.log('ties is ' + playObj.wins.ties);
 	} else if ((playObj.plays.onePlay == 'rock' && playObj.plays.twoPlay == 'scissors') || (playObj.plays.onePlay == 'scissors' && playObj.plays.twoPlay == 'paper') || (playObj.plays.onePlay == 'paper' && playObj.plays.twoPlay == 'rock')) {
-		$('.winning-pic').html('<img class="battle-img" src="img/' + playObj.plays.onePlay + '.jpg" alt="You win!" />');
+		$('.winning-pic').html('<img class="battle-img" src="assets/images/' + playObj.plays.onePlay + '.png" alt="You win!" />');
 		$('.outcome-message').html('<span>' + playObj.plays.onePlay + ' beats ' + playObj.plays.twoPlay + '.  you win!</span>');
 		playObj.wins.oneWins++;
 		$('.col-win').find('span').text('wins: ' + playObj.wins.oneWins);
@@ -193,7 +193,7 @@ function reckoning() {
 		$('.col-lose').find('span').text('losses: ' + playObj.wins.twoWins);
 		console.log('oneWins is ' + playObj.wins.oneWins);
 	} else {
-		$('.winning-pic').html('<img class="battle-img" src="img/' + playObj.plays.twoPlay + '.jpg" alt="You lose!" />');
+		$('.winning-pic').html('<img class="battle-img" src="assets/images/' + playObj.plays.twoPlay + '.png" alt="You lose!" />');
 		$('.outcome-message').html('<span>' + playObj.plays.twoPlay + ' beats ' + playObj.plays.onePlay + '.  you lose!</span>');
 		playObj.wins.twoWins++;
 		$('.col-win').find('span').text('wins: ' + playObj.wins.oneWins);
